@@ -1,0 +1,36 @@
+﻿------ Build started: Project: robot_project_test, Configuration: Debug AVR ------
+Build started.
+Project "robot_project_test.cproj" (default targets):
+Target "PreBuildEvent" skipped, due to false condition; ('$(PreBuildEvent)'!='') was evaluated as (''!='').
+Target "CoreBuild" in file "C:\Program Files (x86)\Atmel\Atmel Studio 6.2\Vs\Compiler.targets" from project "C:\Users\Andreas Glatz\Documents\Atmel Studio\6.2\robot_project_test\robot_project_test\robot_project_test.cproj" (target "Build" depends on it):
+	Task "RunCompilerTask"
+		Shell Utils Path C:\Program Files (x86)\Atmel\Atmel Studio 6.2\shellUtils
+		C:\Program Files (x86)\Atmel\Atmel Studio 6.2\shellUtils\make.exe all 
+		Building file: .././robot_project_test.c
+		Invoking: AVR/GNU C Compiler : 4.8.1
+		"C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1061\avr8-gnu-toolchain\bin\avr-gcc.exe"  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega8 -c -std=gnu99 -MD -MP -MF "robot_project_test.d" -MT"robot_project_test.d" -MT"robot_project_test.o"   -o "robot_project_test.o" ".././robot_project_test.c" 
+		Finished building: .././robot_project_test.c
+		Building target: robot_project_test.elf
+		Invoking: AVR/GNU Linker : 4.8.1
+		"C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1061\avr8-gnu-toolchain\bin\avr-gcc.exe" -o robot_project_test.elf  robot_project_test.o   -Wl,-Map="robot_project_test.map" -Wl,--start-group -Wl,-lm  -Wl,--end-group -Wl,--gc-sections -mmcu=atmega8  
+		Finished building target: robot_project_test.elf
+		"C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1061\avr8-gnu-toolchain\bin\avr-objcopy.exe" -O ihex -R .eeprom -R .fuse -R .lock -R .signature -R .user_signatures  "robot_project_test.elf" "robot_project_test.hex"
+		"C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1061\avr8-gnu-toolchain\bin\avr-objcopy.exe" -j .eeprom  --set-section-flags=.eeprom=alloc,load --change-section-lma .eeprom=0  --no-change-warnings -O ihex "robot_project_test.elf" "robot_project_test.eep" || exit 0
+		"C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1061\avr8-gnu-toolchain\bin\avr-objdump.exe" -h -S "robot_project_test.elf" > "robot_project_test.lss"
+		"C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1061\avr8-gnu-toolchain\bin\avr-objcopy.exe" -O srec -R .eeprom -R .fuse -R .lock -R .signature -R .user_signatures "robot_project_test.elf" "robot_project_test.srec"
+		"C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1061\avr8-gnu-toolchain\bin\avr-size.exe" "robot_project_test.elf"
+		   text	   data	    bss	    dec	    hex	filename
+		   1448	      0	     19	   1467	    5bb	robot_project_test.elf
+	Done executing task "RunCompilerTask".
+	Task "RunOutputFileVerifyTask"
+				Program Memory Usage 	:	1448 bytes   17,7 % Full
+				Data Memory Usage 		:	19 bytes   1,9 % Full
+	Done executing task "RunOutputFileVerifyTask".
+Done building target "CoreBuild" in project "robot_project_test.cproj".
+Target "PostBuildEvent" skipped, due to false condition; ('$(PostBuildEvent)' != '') was evaluated as ('' != '').
+Target "Build" in file "C:\Program Files (x86)\Atmel\Atmel Studio 6.2\Vs\Avr.common.targets" from project "C:\Users\Andreas Glatz\Documents\Atmel Studio\6.2\robot_project_test\robot_project_test\robot_project_test.cproj" (entry point):
+Done building target "Build" in project "robot_project_test.cproj".
+Done building project "robot_project_test.cproj".
+
+Build succeeded.
+========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========
